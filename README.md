@@ -12,14 +12,14 @@ In USART Single Wire mode Pin is configured as open-drain and require external p
 │                  │  │   ┌───3V─┤ 3.3V      │
 │                  │  │  ┌┴┐     │           │
 │              PWR ├──┘  │ │ 1kΩ │           │
-│  SC15            │     │ │     │           │
+│  SC15            │     │ │     │  BluePill │
 │                  │     └┬┘     │           │
 │             DATA ├──────┴───30─┤ PA9       │
 │                  │             │           │
 │                  │             │           │
 │              GND ├──────┬──GND─┤ GND       │
 └──────────────────┘      │      └───────────┘
-                          │        BluePill
+                          │
                          ─┴─
 ```
  
