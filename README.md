@@ -28,9 +28,9 @@ Library itself is well-designed, but some modifications were required for use wi
 ## How to use
 
 - Add as submodule or clone into your project folder.
-- Configure in CubeMX (Cube configuration tool) USART as Half-Duplex (default servo baudrate is 1000000), enable USART Global Interrupt
+- Configure in CubeMX (Cube configuration tool) USART as Half-Duplex (default servo baudrate is 1000000), enable USART Global Interrupt, code generation LL.
 - In code: 
-   - Put `USART_HD_IRQHandler()` in your USARTx interrupt routine 
+   - Put `USART_HD_IRQHandler()` into USARTx interrupt routine 
    - Call `USART_HD_PostInit()` after peripheral initialization
 - Use
 
