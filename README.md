@@ -25,4 +25,17 @@ In USART Single Wire mode Pin is configured as open-drain and require external p
  
 Library itself is well-designed, but some modifications were required for use with LL.
 
+## How to use
+
+- Add as submodule or clone into your project folder.
+- Configure in CubeMX (Cube configuration tool) USART as Half-Duplex (default servo baudrate is 1000000), enable USART Global Interrupt, code generation LL.
+- In code: 
+   - Put `USART_HD_IRQHandler()` into USARTx interrupt routine 
+   - Call `USART_HD_PostInit()` after peripheral initialization
+- Use
+
+### Note
+
+There is a variable in `SCS.c` called `End`, which determines endiannes conversion between servo and mcu. For STM32 it should be set to 1.
+
 Source: [FeeTech SCS SDK](https://gitee.com/ftservo/SCServoSDK)
